@@ -1,6 +1,6 @@
 # hall-relay
 
-This is a PCB design for a hall-effect based, normally-closed, relay.
+This is a PCB design for a hall-effect sensor with normally-closed, high-current open-drain output.
 
 The intended purpose is to directly control a low-voltage DC load, e.g. cupboard lighting
 or it can be integrated with an alarm or building-management system as a door/window sensor.
@@ -9,9 +9,10 @@ The open-drain output is active when a magnetic field is not present, i.e. when 
 
 ## Power Supply
 
-This relay will operate between 5V and 24V DC nominal; the absolute-maximum rating is 28V.  It is not reverse-polarity protected.
+This relay will operate between 5V and 24V DC nominal; the absolute-maximum voltage rating is 28V.  It is not reverse-polarity protected.
 
-It has an open-drain output capable of sinking up to 2A.  It can drive inductive (relays, solenoids) or simple (LED tape) loads.
+It has an open-drain output capable of driving up to 1A into an inductive load (relay or solenoid)
+or up to 2A into simple (LED tape) loads.
 
 ## Magnet
 
