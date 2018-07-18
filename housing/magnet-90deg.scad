@@ -3,14 +3,13 @@
 // the magnet is on the INSIDE of the bracket, which helps with printing and also
 // means it's not visible from the direction the magnet would normally be looked at from
 
-// this version requires a drop of superglue to retain the magnet, there is no
-// press-fit or click-retaining tab - the magnets seem a bit too fragile for that.
+// this version has tiny press-retaining tabs so no magnet glue is required.
 
 mag_diam=8.3;
 mag_thick=1.2;
 mag_ctr=7;
 tab_thick=1.2;
-skin=0.8;
+skin=0.4;
 wall=tab_thick;
 screw=3;
 screw_ctr=4.5;
@@ -35,15 +34,15 @@ rotate(a=[0, -90, 0]) union() {
 
             translate([mag_ctr, 0, -epsilon]) cylinder(d=mag_diam, h=mag_thick, center=false);
         }
-/*
+        
         // retaining tabs
         for(y=[mag_diam/2, -mag_diam/2]){
-            translate([mag_ctr, y, -0.3]) hull() {// cube([0.5, 1, 0.6], center=true);
-                translate([0, 0.3, 0]) sphere(d=0.8);
-                translate([0, -0.3, 0]) sphere(d=0.8);
+            translate([mag_ctr, y, 0]) {
+                translate([0, 0, -0.2]) sphere(d=0.8);
+                // rotate(a=[45, 0, 0]) cube(0.8, center=true);
             }
         }
-*/
+
     }
 
     // screw-down tab
